@@ -1,0 +1,134 @@
+/* Fonts */
+/* === Lexend Deca  ===  */
+/* === Big Shoulders Display === */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* Reset Style */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* === Typography === */
+  --font-family-big-sh: "Big Shoulders Display", cursive;
+  --font-family-Lexend: "Lexend Deca", sans-serif;
+  --font-size: 15px;
+
+  /* === Colors === */
+  --orange: #e38826;
+  --dark-green: #006970;
+  --very-dark-green: #004241;
+  --paragraphs: rgba(255, 255, 255, 0.75);
+  --light-gray: #f2f2f2;
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  font-family: var(--font-family-Lexend);
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+.previews-cards {
+  width: 100%;
+  max-width: 90%;
+  margin: 9rem auto;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.sedan {
+  background-color: var(--orange);
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.suvs {
+  background-color: var(--dark-green);
+}
+.luxury {
+  background-color: var(--very-dark-green);
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+
+.preview-card__heading {
+  font-family: var(--font-family-big-sh);
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--light-gray);
+  margin: 2rem 0;
+}
+
+.preview-card__icon {
+  width: 60px;
+}
+
+.preview-card__description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--paragraphs);
+  margin-bottom: 2rem;
+}
+
+.button {
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: var(--light-gray);
+  align-self: flex-start;
+  display: inline-block;
+  padding: 0.8rem 1.7rem;
+  border-radius: 5rem;
+  font-size: 0.9rem;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+}
+
+.button:hover {
+  background-color: transparent;
+  border-color: var(--light-gray);
+  color: var(--light-gray);
+}
+
+.button--luxury {
+  color: var(--very-dark-green);
+}
+
+.button--suvs {
+  color: var(--dark-green);
+}
+
+.button--sedan {
+  color: var(--orange);
+}
+
+@media screen and (min-width: 1000px) {
+  .previews-cards {
+    width: 100%;
+    max-width: 990px;
+    display: flex;
+  }
+
+  .sedan {
+    border-radius: 0.7rem 0 0 0.7rem;
+  }
+
+  .luxury {
+    border-radius: 0 0.7rem 0.7rem 0;
+  }
+
+  .preview-card__description {
+    margin-bottom: 6rem;
+  }
+}
